@@ -1,0 +1,70 @@
+{
+  "name": "@leonsilicon/kris2808__similar-chinese-characters",
+  "version": "0.0.0",
+  "description": "形近同音近音字 dataset — similar-looking, homophone, and near-homophone Chinese characters",
+  "keywords": [
+    "bopomofo",
+    "characters",
+    "chinese",
+    "homophones",
+    "zhuyin",
+    "同音字",
+    "形近字"
+  ],
+  "homepage": "https://github.com/leonsilicon/kris2808__similar-chinese-characters#readme",
+  "bugs": {
+    "url": "https://github.com/leonsilicon/kris2808__similar-chinese-characters/issues"
+  },
+  "license": "MIT",
+  "author": "Leon Silicon",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonsilicon/kris2808__similar-chinese-characters.git"
+  },
+  "files": [
+    "similar-chinese-characters.json",
+    "index.js",
+    "index.d.ts",
+    "LICENSE",
+    "README.md"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js",
+      "default": "./index.js"
+    },
+    "./similar-chinese-characters.json": "./similar-chinese-characters.json",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "bun run scripts/build.ts",
+    "test": "vp test",
+    "check": "vp check",
+    "prepublishOnly": "bun run build",
+    "prepare": "vp config"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.2",
+    "@typescript/native-preview": "7.0.0-dev.20260509.2",
+    "bumpp": "^11.1.0",
+    "typescript": "^6.0.3",
+    "vite-plus": "^0.1.20",
+    "vitest": "^3.2.4"
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+    "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "packageManager": "bun@1.3.14"
+}
